@@ -104,45 +104,45 @@ public class SystemPhotosPreviewActivity extends BaseBussActivity {
 
         @Override
         public void onClick(View view) {
-            switch (view.getId()) {
-                case R.id.iv_selected:
-                    FilePhotoBean bean = list.get(currentItem);
+            int i = view.getId();
+            if (i == R.id.iv_selected) {
+                FilePhotoBean bean = list.get(currentItem);
+                for (String id : map.keySet()) {
+                    if (id == bean.getId()) {
+                        if (map.get(id)) {
+                            iv_selected.setImageResource(R.mipmap.select_img_normal);
+                            map.put(id, false);
+                        } else {
+                            iv_selected.setImageResource(R.mipmap.select_img_pressed);
+                            map.put(id, true);
+                        }
+                        break;
+                    }
+                }
+
+            } else if (i == R.id.btn_Sure) {
+                sureList = new ArrayList<FilePhotoBean>();
+                cancelList = new ArrayList<FilePhotoBean>();
+                for (FilePhotoBean photoBean : list) {
                     for (String id : map.keySet()) {
-                        if (id == bean.getId()) {
-                            if (map.get(id)) {
-                                iv_selected.setImageResource(R.mipmap.select_img_normal);
-                                map.put(id, false);
+                        Boolean tag = map.get(id);
+                        if (photoBean.getId() == id) {
+                            if (tag) {
+                                sureList.add(photoBean);
                             } else {
-                                iv_selected.setImageResource(R.mipmap.select_img_pressed);
-                                map.put(id, true);
-                            }
-                            break;
-                        }
-                    }
-                    break;
-                case R.id.btn_Sure:
-                    sureList = new ArrayList<FilePhotoBean>();
-                    cancelList = new ArrayList<FilePhotoBean>();
-                    for (FilePhotoBean photoBean : list) {
-                        for (String id : map.keySet()) {
-                            Boolean tag = map.get(id);
-                            if (photoBean.getId() == id) {
-                                if (tag) {
-                                    sureList.add(photoBean);
-                                } else {
-                                    cancelList.add(photoBean);
-                                }
+                                cancelList.add(photoBean);
                             }
                         }
                     }
-                    Bundle bundle = new Bundle();
-                    bundle.putSerializable("sureList", sureList);
-                    bundle.putSerializable("cancelList", cancelList);
-                    intent.putExtras(bundle);
-                    setResult(Activity.RESULT_OK, intent);
-                    _context.finish();
-                    animBack();
-                    break;
+                }
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("sureList", sureList);
+                bundle.putSerializable("cancelList", cancelList);
+                intent.putExtras(bundle);
+                setResult(Activity.RESULT_OK, intent);
+                _context.finish();
+                animBack();
+
             }
         }
     };

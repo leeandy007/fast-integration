@@ -68,10 +68,10 @@ public class MenuGridAdapter extends BaseInfoAdapter<AppBean> {
 
             @Override
             public void onClick(View v) {
-                switch (v.getId()){
-                    case R.id.ll_view:
-                        AndroidUtil.LaunchApp(context, bean.getPackageName());
-                        break;
+                int i = v.getId();
+                if (i == R.id.ll_view) {
+                    AndroidUtil.LaunchApp(context, bean.getPackageName());
+
                 }
             }
         }

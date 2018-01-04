@@ -134,30 +134,30 @@ public class SystemPhotosActivity extends BaseBussActivity {
 
 		@Override
 		public void onClick(View v) {
-			switch(v.getId()) {
-				case R.id.btn_sure://确定
-					HashMap<String, String> map = adapter.getSelectedId();
-					if (map.isEmpty()) {
-						ToastUtil.getInstance().Short("您未选中任何照片");
-					} else {
-						intent.putExtra("photoList", selectedList);
-						setResult(RESULT_OK, intent);
-						finish();
-					}
-					break;
-				case R.id.btn_preview://取消编辑模式
-					if(!StringUtil.isEmpty(selectedList)){
-						intent = new Intent(_context, SystemPhotosPreviewActivity.class);
-						intent.putExtra("selectedList", selectedList);
-						startActivityForResult(intent, REQUEST_SYSTEM_PHOTO_PREVIEW);
-						animNext();
-					} else {
-						ToastUtil.getInstance().Short("您未选中任何照片");
-					}
-					break;
-				case R.id.ib_back://返回
-					onBackPressed();
-					break;
+			int i = v.getId();
+			if (i == R.id.btn_sure) {
+				HashMap<String, String> map = adapter.getSelectedId();
+				if (map.isEmpty()) {
+					ToastUtil.getInstance().Short("您未选中任何照片");
+				} else {
+					intent.putExtra("photoList", selectedList);
+					setResult(RESULT_OK, intent);
+					finish();
+				}
+
+			} else if (i == R.id.btn_preview) {
+				if (!StringUtil.isEmpty(selectedList)) {
+					intent = new Intent(_context, SystemPhotosPreviewActivity.class);
+					intent.putExtra("selectedList", selectedList);
+					startActivityForResult(intent, REQUEST_SYSTEM_PHOTO_PREVIEW);
+					animNext();
+				} else {
+					ToastUtil.getInstance().Short("您未选中任何照片");
+				}
+
+			} else if (i == R.id.ib_back) {
+				onBackPressed();
+
 			}
 		}
 	};
