@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/main_home"
+        android:icon="@mipmap/main_home_nor"
+        android:title="首页"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/main_school"
+        android:icon="@mipmap/main_school_nor"
+        android:title="学堂"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/main_community"
+        android:icon="@mipmap/main_community_nor"
+        android:title="社区"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/main_user"
+        android:icon="@mipmap/main_user_nor"
+        android:title="我的"
+        app:showAsAction="ifRoom" />
+
+</menu>

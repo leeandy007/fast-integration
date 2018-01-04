@@ -1,0 +1,155 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TranslucentAppTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <!-- 主标题栏字体 -->
+    <style name="text_white_30">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="text_black_20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text_white_20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="text_blue_20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="text_red_20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="text_orange_20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/holo_orange_light</item>
+    </style>
+
+    <style name="text_red_18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="text_white_18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="text_black_17">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text_gray_17">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/gray_deep</item>
+    </style>
+
+    <style name="text_black_15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text_blue_15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="text_white_15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="text_gray_15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/gray_deep</item>
+    </style>
+
+    <style name="text_white_12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="text_gray_13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/gray_deep</item>
+    </style>
+
+    <style name="text_orange_12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/holo_orange_light</item>
+    </style>
+
+
+    <!--自定义dialog背景全透明无边框theme -->
+    <style name="MyDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <style name="FullScreenDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item> <!-- 是否显示标题 -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item> <!-- 是否允许透明 -->
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@drawable/dialog_bg</item> <!-- 背景 -->
+        <item name="android:backgroundDimEnabled">true</item> <!-- 背景是否模糊 -->
+    </style>
+
+    <!-- 定义对话框的样式 -->
+    <style name="custom_window_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/main_dialog_bg</item>
+    </style>
+
+
+    <style name="Fullscreen_Dialog">
+        <item name="android:windowBackground">@color/transparent_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="btn_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

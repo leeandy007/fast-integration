@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popwindow_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_dialog_title_bg">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/text_white_20"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dip"
+                android:padding="6dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/text_black_17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="你好" />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_view"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSure"
+                style="@style/btn_style"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/btnCancle"
+                style="@style/btn_style"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:text="取消" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

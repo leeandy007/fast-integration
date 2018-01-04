@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/club_sub_common_photos_grid_item_fm"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/iv_photos_grid_item_img"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:focusable="false"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/view_photos_grid_item_ground"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#a0FCFCFC" />
+
+        <ImageView
+            android:id="@+id/iv_photos_grid_item_icon"
+            android:visibility="gone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|bottom"
+            android:adjustViewBounds="true"
+            android:focusable="false"
+            android:src="@mipmap/select_img_pressed" />
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/ll_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:padding="2dp"
+        android:orientation="vertical">
+        
+        <TextView
+            android:id="@+id/tv_photos_grid_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="name"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_photos_grid_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="(6)"
+            android:textSize="12sp" />
+        
+    </LinearLayout>
+
+    
+
+</LinearLayout>

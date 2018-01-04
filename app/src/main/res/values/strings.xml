@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">我的框架</string>
+    <!-- domain_url正式部署环境 -->
+    <string name="domain_url">http://172.28.65.152/srit-zscq</string>
+    <!--<string name="domain_url">http://xzjhome.cc</string>-->
+    <!-- debug_url开发测试环境 -->
+    <string name="debug_url">http://192.168.67.119:8082</string>
+    <!-- true：开发测试环境 相应url为debug_url； false：正式部署环境 相应url为domain_url -->
+    <item name="isDebug" type="bool">true</item>
+
+
+    <string name="bottom_navigation_view_behavior">com.beicai.oa.widget.BottomNavigationViewBehavior</string>
+    <string name="float_behavior">com.beicai.oa.widget.behavior.FloatButtonBehavior</string>
+    <string name="bottom_behavior">com.beicai.oa.widget.behavior.BottomBehavior</string>
+    <string name="top_behavior">com.beicai.oa.widget.behavior.TopBehavior</string>
+
+
+</resources>
