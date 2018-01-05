@@ -10,13 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/TranslucentAppTheme">
-        <activity android:name=".ui.activity.sub.WelcomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ui.activity.sub.MainActivity"/>
+        <!--<activity android:name=".ui.activity.sub.WelcomeActivity">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <!--<activity android:name=".ui.activity.sub.MainActivity"/>-->
 
         <meta-data
             android:name="com.andy.myproject_007.util.HttpsGlide.OkHttpGlideModule"
