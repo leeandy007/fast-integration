@@ -12,9 +12,11 @@ public class LogUtil {
 
 	private static String TAG = "";
 
-	private static LogUtil mLogUtil;
+	private static LogUtil mLogUtil = null;
 
 	private static Context context;
+
+    private LogUtil(){}
 
 	public static LogUtil getInstance(){
 		if(mLogUtil == null){

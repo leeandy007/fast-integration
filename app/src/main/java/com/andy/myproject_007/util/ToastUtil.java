@@ -10,7 +10,9 @@ import com.andy.myproject_007.common.MainApplication;
  */
 public class ToastUtil {
 
-    private static ToastUtil mToastUtil;
+    private static ToastUtil mToastUtil = null;
+
+    private ToastUtil(){}
 
     public static ToastUtil getInstance(){
         if(mToastUtil == null){

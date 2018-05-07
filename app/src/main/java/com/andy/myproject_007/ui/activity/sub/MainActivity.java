@@ -101,18 +101,18 @@ public class MainActivity extends BaseBussActivity {
             }
         });
         gv_main.setAdapter(adapter);
-//        MenuGridAdapter adapter = new MenuGridAdapter(appList, new ViewHolderCreator() {
+//        MenuGridAdapter adapter = new MenuGridAdapter(appList, new ViewHolderCreator<MenuGridAdapter.GridViewHolder>() {
 //            @Override
-//            public Object createHolder() {
+//            public MenuGridAdapter.GridViewHolder createHolder() {
 //                return new MenuGridAdapter.GridViewHolder();
 //            }
 //        });
 //        gv_main.setAdapter(adapter);
 //        rv_main.setLayoutManager(new GridLayoutManager(_context, 3));
 //        rv_main.addItemDecoration(new MarginDecoration(_context));
-//        MenuAdapter aadapter = new MenuAdapter(_context, appList, new ViewHolderCreator() {
+//        MenuAdapter aadapter = new MenuAdapter(_context, appList, new ViewHolderCreator<MenuAdapter.ViewHolder>() {
 //            @Override
-//            public Object createHolder() {
+//            public MenuAdapter.ViewHolder createHolder() {
 //                View view = View.inflate(_context, R.layout.adapter_app_grid_item, null);
 //                return new MenuAdapter.ViewHolder(view);
 //            }
