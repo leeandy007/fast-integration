@@ -110,24 +110,24 @@ public class NetUtil1 {
 		String baseUrl = MainApplication.getURL();
 		return baseUrl;
 	}
-	private static String getliveUrl(){
-		String baseUrl = MainApplication.getLiveURL();
-		return baseUrl;
-	}
-	private static String getAppUrl() {
-		String baseUrl = MainApplication.getAppURL();
-		return baseUrl;
-	}
+//	private static String getliveUrl(){
+//		String baseUrl = MainApplication.getLiveURL();
+//		return baseUrl;
+//	}
+//	private static String getAppUrl() {
+//		String baseUrl = MainApplication.getAppURL();
+//		return baseUrl;
+//	}
 
-	public static void getApp(final Context context,String action, Map<String, Object> params, final RequestCallBack mRequestCallBack) {
-		final String requestUrl = getAppUrl() + action + "?" + getParamsUrl(params);
-		executorService.submit(new Runnable() {
-			@Override
-			public void run() {
-				RequestGetUrl(requestUrl, mRequestCallBack);
-			}
-		});
-	}
+//	public static void getApp(final Context context,String action, Map<String, Object> params, final RequestCallBack mRequestCallBack) {
+//		final String requestUrl = getAppUrl() + action + "?" + getParamsUrl(params);
+//		executorService.submit(new Runnable() {
+//			@Override
+//			public void run() {
+//				RequestGetUrl(requestUrl, mRequestCallBack);
+//			}
+//		});
+//	}
 
 	/**
 	 * Post 可多文件上传
@@ -136,25 +136,25 @@ public class NetUtil1 {
 	 * @param params           请求参数，上传文件格式params.put(file.getName(), file);
 	 * @param mRequestCallBack 实现回调得到服务器返回数据
 	 */
-	public static void postApp(final String action, final Map<String, Object> params, final RequestCallBack mRequestCallBack) {
-		final Map<String, Object> map = new HashMap<String, Object>();
-		final Map<String, File> files = new HashMap<String, File>();
-		for (Map.Entry<String, Object> entry : params.entrySet()) {
-			if (entry.getValue() instanceof File) {
-				files.put(entry.getKey(), (File) entry.getValue());
-			} else {
-				map.put(entry.getKey(), entry.getValue());
-			}
-		}
-		executorService.submit(new Runnable() {
-			@Override
-			public void run() {
-
-				RequestPostUpLoadFile(getAppUrl() + action, map, files, mRequestCallBack);
-			}
-		});
-
-	}
+//	public static void postApp(final String action, final Map<String, Object> params, final RequestCallBack mRequestCallBack) {
+//		final Map<String, Object> map = new HashMap<String, Object>();
+//		final Map<String, File> files = new HashMap<String, File>();
+//		for (Map.Entry<String, Object> entry : params.entrySet()) {
+//			if (entry.getValue() instanceof File) {
+//				files.put(entry.getKey(), (File) entry.getValue());
+//			} else {
+//				map.put(entry.getKey(), entry.getValue());
+//			}
+//		}
+//		executorService.submit(new Runnable() {
+//			@Override
+//			public void run() {
+//
+//				RequestPostUpLoadFile(getAppUrl() + action, map, files, mRequestCallBack);
+//			}
+//		});
+//
+//	}
 
 	/**
 	 * Get
@@ -197,15 +197,15 @@ public class NetUtil1 {
 		});
 
 	}
-	public static void getLive(String action, Map<String, Object> params, final RequestCallBack mRequestCallBack) {
-		final String requestUrl = getliveUrl() + action + "?" + getParamsUrl(params);
-		executorService.submit(new Runnable() {
-			@Override
-			public void run() {
-				RequestGetUrl(requestUrl, mRequestCallBack);
-			}
-		});
-	}
+//	public static void getLive(String action, Map<String, Object> params, final RequestCallBack mRequestCallBack) {
+//		final String requestUrl = getliveUrl() + action + "?" + getParamsUrl(params);
+//		executorService.submit(new Runnable() {
+//			@Override
+//			public void run() {
+//				RequestGetUrl(requestUrl, mRequestCallBack);
+//			}
+//		});
+//	}
 
 	/**
 	 * Post 可多文件上传
@@ -213,25 +213,25 @@ public class NetUtil1 {
 	 * @param params 请求参数，上传文件格式params.put(file.getName(), file);
 	 * @param mRequestCallBack 实现回调得到服务器返回数据
 	 */
-	public static void postLive(final String action, final Map<String, Object> params, final RequestCallBack mRequestCallBack) {
-		final Map<String, Object> map = new HashMap<String, Object>();
-		final Map<String, File> files = new HashMap<String, File>();
-		for(Map.Entry<String, Object> entry : params.entrySet()){
-			if(entry.getValue() instanceof File){
-				files.put(entry.getKey(), (File)entry.getValue());
-			} else {
-				map.put(entry.getKey(), entry.getValue());
-			}
-		}
-		executorService.submit(new Runnable() {
-			@Override
-			public void run() {
-
-				RequestPostUpLoadFile(getliveUrl() + action, map, files, mRequestCallBack);
-			}
-		});
-
-	}
+//	public static void postLive(final String action, final Map<String, Object> params, final RequestCallBack mRequestCallBack) {
+//		final Map<String, Object> map = new HashMap<String, Object>();
+//		final Map<String, File> files = new HashMap<String, File>();
+//		for(Map.Entry<String, Object> entry : params.entrySet()){
+//			if(entry.getValue() instanceof File){
+//				files.put(entry.getKey(), (File)entry.getValue());
+//			} else {
+//				map.put(entry.getKey(), entry.getValue());
+//			}
+//		}
+//		executorService.submit(new Runnable() {
+//			@Override
+//			public void run() {
+//
+//				RequestPostUpLoadFile(getliveUrl() + action, map, files, mRequestCallBack);
+//			}
+//		});
+//
+//	}
 
 	/**
 	 * Get请求， https的注释主要写在该方法里

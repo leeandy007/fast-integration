@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.andy.myproject_007">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:name=".common.MainApplication"
         android:allowBackup="true"
